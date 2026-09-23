@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PCBS计算器 — PC Building Simulator</title>
+<meta name="description" content="《PC Building Simulator》离线配机计算器：给定预算与目标分数，精确求出最便宜的完整配置；给定现有主机，精确求出最便宜的升级方案。">
+<!--STYLES-->
+</head>
+<body>
+<div class="app">
+    <aside class="sidebar">
+        <div class="brand">
+            <div class="brand-mark">装</div>
+            <div>
+                <div class="brand-title">PCBS计算器</div>
+                <div class="brand-sub">PC Building Simulator</div>
+            </div>
+        </div>
+        <nav id="nav" class="nav" aria-label="页面导航"></nav>
+        <div class="sidebar-foot">
+            <button id="themeToggle" class="ghost" type="button">切换主题</button>
+            <button id="resetSettings" class="ghost" type="button">重置设置</button>
+            <div class="meta" id="dataMeta"></div>
+        </div>
+    </aside>
+
+    <main class="main">
+        <header class="topbar">
+            <div class="level-bar">
+                <span class="level-bar-title">生涯门槛</span>
+                <label class="check">
+                    <input type="checkbox" id="allUnlocked" checked>
+                    <span>全部零件已解锁</span>
+                </label>
+                <label class="inline-field">
+                    <span>等级</span>
+                    <input type="number" id="level" min="0" max="30" step="1" value="0" disabled>
+                </label>
+                <label class="inline-field">
+                    <span>等级内进度&nbsp;%</span>
+                    <input type="number" id="levelPercent" min="0" max="100" step="1" placeholder="—" disabled>
+                </label>
+                <div class="pool-chip" id="poolChip">—</div>
+            </div>
+        </header>
+
+        <section class="page-head">
+            <h1 id="pageTitle">—</h1>
+            <p id="pageSubtitle" class="muted"></p>
+        </section>
+
+        <div id="page" class="page"></div>
+
+        <footer class="foot">
+            <span>PCBS计算器 · 零件数据来自游戏 · 玩家自制工具，与游戏开发商及发行商无隶属关系。</span>
+        </footer>
+    </main>
+</div>
+
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+<!--CATALOG-->
+<!--CORE-->
+<!--APP-->
+</body>
+</html>

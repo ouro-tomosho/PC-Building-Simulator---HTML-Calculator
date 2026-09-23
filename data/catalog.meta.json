@@ -1,0 +1,43 @@
+{
+  "generatedFrom": "PC-Building-Simulator-HTML-Calculator.html",
+  "sourceSha256": "ec55add2792099c709422234654b238b6ac5bb14bf259b31284c7137f00fd4a1",
+  "generatedAt": "2026-09-23T21:11:45.763Z",
+  "hemPartsDropped": 1714,
+  "hemByDimension": {
+    "cpus": 555,
+    "gpus": 505,
+    "mobos": 136,
+    "rams": 315,
+    "pcCases": 173,
+    "storages": 30
+  },
+  "hemSpeedGroupsDropped": [
+    "HEM"
+  ],
+  "counts": {
+    "cpus": {
+      "total": 126,
+      "usable": 126
+    },
+    "gpus": {
+      "total": 316,
+      "usable": 316
+    },
+    "mobos": {
+      "total": 145,
+      "usable": 145
+    },
+    "rams": {
+      "total": 341,
+      "usable": 340
+    },
+    "pcCases": {
+      "total": 340,
+      "usable": 337
+    },
+    "storages": {
+      "total": 127,
+      "usable": 127
+    }
+  }
+}

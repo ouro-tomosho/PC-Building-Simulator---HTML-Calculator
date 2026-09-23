@@ -1,0 +1,22 @@
+{
+  "name": "pcbs-calculator",
+  "version": "0.2.1",
+  "private": true,
+  "type": "commonjs",
+  "description": "Offline exact build calculator for PC Building Simulator: the cheapest complete build within a budget, or the minimum budget that reaches a target score.",
+  "main": "src/index.js",
+  "scripts": {
+    "build": "node tools/build-web.mjs"
+  },
+  "keywords": [
+    "pc-building-simulator",
+    "build-planner",
+    "build-upgrader",
+    "combinatorial-optimization",
+    "offline"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=16"
+  }
+}
