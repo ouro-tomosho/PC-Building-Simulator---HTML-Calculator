@@ -1,8 +1,10 @@
 # PCBS计算器 使用说明书
 
+在线使用：<https://ouro-tomosho.github.io/PCBS-Calculator/>
+
 《PC Building Simulator》的离线配机计算器：给出预算、目标 3DMark 分数和筛选条件后，**精确**求出最便宜且互相完全兼容的配置；也可以在一台现有主机的基础上，求出最便宜、且能让整机达标的升级方案。
 
-整个应用就是仓库根目录里的 `PCBS-Calculator.html` 一个文件（约 0.88 MB）：双击即可使用，不需要安装、不需要联网、不需要启动服务器，也不会把任何数据传出浏览器。
+整个应用就是仓库根目录里的 `index.html` 一个文件（约 0.88 MB）：双击即可使用，不需要安装、不需要联网、不需要启动服务器，也不会把任何数据传出浏览器。根目录改用 `index.html` 这个名字，是为了让 GitHub Pages 把它当作站点首页发布。
 
 ## 目录
 
@@ -16,7 +18,7 @@
 
 ## 快速开始
 
-1. **打开**：双击根目录的 `PCBS-Calculator.html`，用浏览器打开（Chrome / Edge / Firefox / Safari 均可）。
+1. **打开**：双击根目录的 `index.html`，用浏览器打开（Chrome / Edge / Firefox / Safari 均可）。
 2. **确认门槛**：侧边栏顶部保持默认的「全部零件已解锁」。要按生涯进度限制零件时，见[设置生涯门槛](#设置生涯门槛)。
 3. **选页面**：配一台新机器用「配置生成器」；改造现有主机用「升级生成器」。
 4. **填需求**：只需填「预算」和「目标分数」中的**任意一个**，另一个可以留空。
@@ -207,10 +209,10 @@
 
 ## 重新构建
 
-仓库根目录的 `PCBS-Calculator.html` 是由 `src/`、`web/` 与 `data/catalog.json` 打包生成的。改动源码后重新生成：
+仓库根目录的 `index.html` 是由 `src/`、`web/` 与 `data/catalog.json` 打包生成的。改动源码后重新生成：
 
 ```bash
-npm run build                                   # 输出到根目录 PCBS-Calculator.html
+npm run build                                   # 输出到根目录 index.html
 node tools/build-web.mjs --out 输出文件.html      # 输出到指定路径
 ```
 

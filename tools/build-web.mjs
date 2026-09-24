@@ -1,15 +1,15 @@
 #!/usr/bin/env node
 /*
  * Bundles src/ + web/ + data/catalog.json into a single self-contained HTML file at
- * the project root, named after the project (PCBS-Calculator.html) -- the same "double-click
- * it, no server, no network" property the original calculator had, but built from a
- * normal multi-file project.
+ * the project root, named index.html (GitHub Pages serves it as the site root) -- the
+ * same "double-click it, no server, no network" property the original calculator had,
+ * but built from a normal multi-file project.
  *
  * src/ is CommonJS (so Node can require it directly); this script wraps every module
  * in a registry and emits a 40-line loader, so there is exactly one source of truth
  * for the solver logic.
  *
- *   node tools/build-web.mjs [--out PCBS-Calculator.html]
+ *   node tools/build-web.mjs [--out index.html]
  */
 
 import fs from 'node:fs';
@@ -87,7 +87,7 @@ function bundleCore() {
 }
 
 export function buildWeb(outArg) {
-    const outFile = path.resolve(ROOT, outArg || 'PCBS-Calculator.html');
+    const outFile = path.resolve(ROOT, outArg || 'index.html');
 
     const catalogPath = path.join(ROOT, 'data', 'catalog.json');
     if (!fs.existsSync(catalogPath)) {
@@ -131,7 +131,7 @@ export function buildWeb(outArg) {
 function main() {
     const outIndex = process.argv.indexOf('--out');
     try {
-        buildWeb(outIndex > -1 ? process.argv[outIndex + 1] : 'PCBS-Calculator.html');
+        buildWeb(outIndex > -1 ? process.argv[outIndex + 1] : 'index.html');
     } catch (err) {
         console.error(err.message);
         process.exitCode = 1;
